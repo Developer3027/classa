@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Classa2</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <header>
+      <%= render "layouts/site_partials/navbar" %>
+    </header>
+    <main class="container mx-auto">
+      <%= render "layouts/msg_partials/alert" if alert %>
+      <%= render "layouts/msg_partials/notice" if notice %>
+      <%= yield %>
+    </main>
+  </body>
+</html>
