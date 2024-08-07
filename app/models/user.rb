@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   # The `role` column is an enum that can only take on the values `:user` and `:admin`.
-  enum role: [:user, :admin]
+  enum role: [:user, :recruiter, :admin]
   # The `set_default_role` method is called automatically by the `after_initialize` callback
   after_initialize :set_default_role, if: :new_record?
 
