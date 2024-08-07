@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :on_boardings
   devise_for :users, controllers: {
     sessions: "users/sessions",
     registrations: "users/registrations",

@@ -1,0 +1,2 @@
+json.extract! on_boarding, :id, :current_address, :current_address_2, :current_city, :current_state, :current_zip, :current_country, :residence, :previous_address, :previous_address_2, :previous_city, :previous_state, :previous_zip, :previous_country, :ssn_sin, :dob, :emergency_contact, :emergency_phone, :license, :drive_experience, :endorsements, :military, :veteran, :moving_violations, :preventable_accidents, :current_status, :team, :common_freight, :contact_time, :contact_method, :user_id, :created_at, :updated_at
+json.url on_boarding_url(on_boarding, format: :json)
