@@ -9,113 +9,124 @@
       </ul>
     </div>
   <% end %>
-  <div class="my-5">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  <div class="border border-zinc-300 rounded p-3 mt-2">
+    <h2 class="text-xl">Personal Information</h2>
+    <div class="my-5">
+      <%= form.label :first_name, "First Name" %>
+      <%= form.text_field :first_name, placeholder: "John / Jane", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :last_name, "Last Name" %>
+      <%= form.text_field :last_name, placeholder: "Jones / Smith", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :phone %>
+      <%= form.text_field :phone, placeholder: "555-555-6000", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :email %>
+      <%= form.text_field :email, placeholder: "johnjones@mymail.com", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :dob, "Date of Birth" %>
+      <%= form.text_field :dob, placeholder: "01/15/94", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
   </div>
-  <div class="my-5">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  <div class="border border-zinc-300 rounded p-3 mt-2">
+    <h2 class="text-xl">Location</h2>
+    <div class="my-5">
+      <%= form.label :current_address, "Address" %>
+      <%= form.text_field :current_address, placeholder: "555 Breezy Oak st.", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :current_address_2, "Address 2" %>
+      <%= form.text_field :current_address_2, placeholder: "Apt 10120", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :current_city, "City" %>
+      <%= form.text_field :current_city, placeholder: "Denver", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :current_state, "State / Province" %>
+      <%= form.text_field :current_state, placeholder: "Colorado", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :current_zip, "Zip Code" %>
+      <%= form.text_field :current_zip, placeholder: "80240", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :current_country, "Country" %>
+      <%= form.text_field :current_country, placeholder: "United States", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
   </div>
-  <div class="my-5">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :dob %>
-    <%= form.text_field :dob, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :current_address %>
-    <%= form.text_field :current_address, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :current_address_2 %>
-    <%= form.text_field :current_address_2, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :current_city %>
-    <%= form.text_field :current_city, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :current_state %>
-    <%= form.text_field :current_state, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :current_zip %>
-    <%= form.text_field :current_zip, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :current_country %>
-    <%= form.text_field :current_country, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :ssn_sin %>
-    <%= form.text_field :ssn_sin, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :emergency_contact %>
-    <%= form.text_field :emergency_contact, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :emergency_phone %>
-    <%= form.text_field :emergency_phone, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :license %>
-    <%= form.text_field :license, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :drive_experience %>
-    <%= form.text_field :drive_experience, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :endorsements %>
-    <%= form.text_field :endorsements, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :military %>
-    <%= form.text_field :military, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :veteran %>
-    <%= form.text_field :veteran, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :moving_violations %>
-    <%= form.text_field :moving_violations, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :preventable_accidents %>
-    <%= form.text_field :preventable_accidents, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :current_status %>
-    <%= form.text_field :current_status, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :team %>
-    <%= form.text_field :team, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :common_freight %>
-    <%= form.text_field :common_freight, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :contact_time %>
-    <%= form.text_field :contact_time, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :contact_method %>
-    <%= form.text_field :contact_method, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-  <div class="my-5">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  <div class="border border-zinc-300 rounded p-3 mt-2">
+    <h2 class="text-xl">Qualifications</h2>
+    <!--Select for CDL - ClassA ClassB ClassC-->
+    <div class="my-5">
+      <%= form.label :license, "License Type" %>
+      <%= form.text_field :license, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <!--Select for experience - Need CDL Training, In CDL School, ...-->
+    <div class="my-5">
+      <%= form.label :drive_experience, "Total Years Experience" %>
+      <%= form.text_field :drive_experience, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <!--Select for endorsements need to select many endorsements-->
+    <div class="my-5">
+      <%= form.label :endorsements, "CDL Endorsements" %>
+      <%= form.text_field :endorsements, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <!--Current Military - yes, no-->
+    <div class="my-5">
+      <%= form.label :military, "Current Military Member?" %>
+      <%= form.text_field :military, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <!--Are you a Veteran - yes, no-->
+    <!--This field needs info to explain-->
+    <div class="my-5">
+      <%= form.label :veteran, "Are you a Veteran?" %>
+      <%= form.text_field :veteran, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <!--Number of violations-->
+    <div class="my-5">
+      <%= form.label :moving_violations, "Moving violations in the past 3 years:" %>
+      <%= form.text_field :moving_violations, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <!--Number of accidents-->
+    <div class="my-5">
+      <%= form.label :preventable_accidents, "Preventable accidents in past 3 years:" %>
+      <%= form.text_field :preventable_accidents, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <!--Select - Company driver, Lease or Owner Op-->
+    <div class="my-5">
+      <%= form.label :current_status, "Career Type" %>
+      <%= form.text_field :current_status, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :solo_team, "Solo or Team Driver?" %>
+      <%= form.text_field :solo_team, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :interest_team, "Interested in Team Driveing?" %>
+      <%= form.text_field :interest_team, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :common_freight, "Commonly Hauled Freight" %>
+      <%= form.text_field :common_freight, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :prefered_freight, "Prefered Freight" %>
+      <%= form.text_field :prefered_freight, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <%= form.label :contact_time, "Best time to contact" %>
+      <%= form.text_field :contact_time, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <!--Select - Phone, Email, Text-->
+    <div class="my-5">
+      <%= form.label :contact_method, "Best method to contact" %>
+      <%= form.text_field :contact_method, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
   </div>
   <div class="inline">
     <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
