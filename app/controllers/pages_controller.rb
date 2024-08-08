@@ -4,6 +4,10 @@ class PagesController < ApplicationController
     @user = current_user.present? ? current_user : User.new
   end
 
+  def register
+
+  end
+
   def create
     @on_boarding = OnBoarding.new(on_boarding_params)
 
