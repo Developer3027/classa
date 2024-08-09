@@ -10,9 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_07_002446) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_09_024532) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "on_boardings", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "phone"
+    t.string "email"
+    t.string "dob"
+    t.string "current_address"
+    t.string "current_address_2"
+    t.string "current_city"
+    t.string "current_state"
+    t.string "current_zip"
+    t.string "current_country"
+    t.string "ssn_sin"
+    t.string "emergency_contact"
+    t.string "emergency_phone"
+    t.string "license"
+    t.string "drive_experience"
+    t.string "endorsements"
+    t.string "military"
+    t.string "veteran"
+    t.string "moving_violations"
+    t.string "preventable_accidents"
+    t.string "current_status"
+    t.string "solo_team"
+    t.string "interest_team"
+    t.string "common_freight"
+    t.string "prefered_freight"
+    t.string "contact_time"
+    t.string "contact_method"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,6 +59,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_07_002446) do
     t.string "first_name"
     t.string "last_name"
     t.string "phone"
+    t.string "dob"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

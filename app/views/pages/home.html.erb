@@ -1,4 +1,55 @@
-<div class="mt-24">
-  <h1 class="font-bold text-4xl">Pages#home</h1>
-  <p>Find me in app/views/pages/home.html.erb</p>
-</div>
+<section class="mt-20 bg-white dark:bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
+    <a href="#" class="inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
+      <span class="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 me-3">Welcome</span> <span class="text-sm font-medium">Already a member of Class A Services?</span>
+      <svg class="w-2.5 h-2.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+      </svg>
+    </a>
+    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl dark:text-white">Steer your driving career in the right direction!</h1>
+    <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200">You have the key. Let's put it in gear and get on the right route. Here you can take control of your driving career. Register and fill out the form to get started. We can help you find that trucking career you have been waiting for. Keep track of your driving history, license, edcucation, and more. Ready to meet your personal recruiter who is dedicated to ensuring you get the job that appreciates your hard work?</p>
+    <div class="flex flex-col justify-center items-center">
+      <div class="w-full lg:max-w-xl p-6 space-y-8 sm:p-8 bg-white rounded-lg shadow-xl dark:bg-gray-800">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
+          Register your account.
+        </h2>
+        <small class="text-gray-800 dark:text-white">Whether you are filling out a quick form for job inquires or filling out a job application, creating a account helps you save your work and keep track of your status.</small>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: "mt-8 space-y-6",) do |f| %>
+          <div class="flex flex-col items-start">
+            <%= f.label :first_name, class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+            <%= f.text_field :first_name, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+          </div>
+          <div class="flex flex-col items-start">
+            <%= f.label :last_name, class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+            <%= f.text_field :last_name, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+          </div>
+          <div class="flex flex-col items-start">
+            <%= f.label :phone, class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+            <%= f.text_field :phone, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+          </div>
+          <div class="flex flex-col items-start">
+            <%= f.label :dob, class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+            <%= f.text_field :dob, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+          </div>
+          <div class="flex flex-col items-start">
+            <%= f.label :email, class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+            <%= f.email_field :email, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+          </div>
+          <div class="flex flex-col items-start">
+            <%= f.label :password, class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+            <%= f.password_field :password, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+          </div>
+          <div class="flex flex-col items-start">
+            <%= f.label :confirm_password, class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+            <%= f.password_field :confirm_password, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+          </div>
+          <%= f.submit "Register", class: "w-full my-3 px-5 py-3  text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring%-blue-300 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>
+        <% end %>
+        <div class="text-sm font-medium text-gray-900 dark:text-white">
+          Not registered yet? <a class="text-blue-600 hover:underline dark:text-blue-500">Create account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gradient-to-b from-blue-50 to-transparent dark:from-blue-900 w-full h-full absolute top-0 left-0 z-0"></div>
+</section>

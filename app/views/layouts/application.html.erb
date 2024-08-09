@@ -14,8 +14,12 @@
       <%= render "layouts/site_partials/navbar" %>
     </header>
     <main class="container mx-auto">
-      <%= render "layouts/msg_partials/alert" if alert %>
-      <%= render "layouts/msg_partials/notice" if notice %>
+      <% if alert || notice %>
+        <div class="text-center align-middle mx-auto mt-2">
+          <%= render "layouts/msg_partials/alert" if alert %>
+          <%= render "layouts/msg_partials/notice" if notice %>
+        </div>
+      <% end %>
       <%= yield %>
     </main>
   </body>
