@@ -1,0 +1,57 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  middle_name: MyString
+  current_address: MyString
+  current_address_2: MyString
+  current_city: MyString
+  current_state: MyString
+  current_zip: MyString
+  current_country: MyString
+  lic_type: MyString
+  cdl_experience: MyString
+  endorsements: MyString
+  veteran: MyString
+  military_branch: MyString
+  moving_violations: MyString
+  mv_info: MyText
+  preventable_accidents: MyString
+  pa_info: MyText
+  career_status: MyString
+  solo_team: MyString
+  interest_team: MyString
+  common_freight: MyString
+  prefered_freight: MyString
+  contact_time: MyString
+  contact_method: MyString
+  pp_tos: MyString
+  bio: MyString
+  user: one
+
+two:
+  middle_name: MyString
+  current_address: MyString
+  current_address_2: MyString
+  current_city: MyString
+  current_state: MyString
+  current_zip: MyString
+  current_country: MyString
+  lic_type: MyString
+  cdl_experience: MyString
+  endorsements: MyString
+  veteran: MyString
+  military_branch: MyString
+  moving_violations: MyString
+  mv_info: MyText
+  preventable_accidents: MyString
+  pa_info: MyText
+  career_status: MyString
+  solo_team: MyString
+  interest_team: MyString
+  common_freight: MyString
+  prefered_freight: MyString
+  contact_time: MyString
+  contact_method: MyString
+  pp_tos: MyString
+  bio: MyString
+  user: two
