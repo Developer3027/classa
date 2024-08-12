@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  pay_rate: MyString
+  enrollment_status: MyString
+  enrollment_location: MyString
+  published_at: 2024-08-11 17:00:07
+
+two:
+  title: MyString
+  pay_rate: MyString
+  enrollment_status: MyString
+  enrollment_location: MyString
+  published_at: 2024-08-11 17:00:07
