@@ -7,12 +7,16 @@
       <div>
         <%= render "layouts/msg_partials/alert" if alert %>
         <%= render "layouts/msg_partials/notice" if notice %>
+        <% if resource.errors.any? %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+        <% end %>
       </div>
     </div>
     <!-- //? Right section Page Links -->
     <div class="flex flex-grow justify-end ">
       <ul class="flex space-x-2">
         <li class="hidden md:flex"><%= link_to "Driver", root_path %></li>
+        <li class="hidden md:flex"><%= link_to "Jobs", jobs_path %></li>
         <% if user_signed_in? %>
           <li>
             <button role="button" aria-label="menu" data-action="click->navbar#profileToggle">
