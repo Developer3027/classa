@@ -1,0 +1,22 @@
+<div class="bg-white dark:bg-gray-900 mt-20 py-10">
+  <div class="flex flex-col justify-center items-center">
+    <div class="w-full p-6 space-y-8 sm:p-8 bg-white rounded-lg shadow-xl dark:bg-gray-800">
+      <% content_for :title, "Inquiries" %>
+      <div class="flex justify-between items-center">
+        <h1 class="font-bold text-4xl">Inquiries</h1>
+        <% if user_signed_in? && current_user.inquiries.any? %>
+          <%= link_to "Edit Inquiry", edit_inquiry_path(current_user.inquiries.first), class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+        <% else %>
+          <%= link_to "New Inquiry", new_inquiry_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+        <% end %>
+      </div>
+      <div id="inquiry" class="min-w-full">
+        <div class="flex justify-center">
+          <% @inquiries.each do |inquiry| %>
+            <%= render "inquiry", inquiry: inquiry, class: "flex" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
