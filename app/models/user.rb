@@ -7,6 +7,7 @@ class User < ApplicationRecord
   # Validate the presence of required fields
   validates :first_name, :last_name, :phone, :dob, :email, :password, presence: true
 
+  has_many :inquiries, dependent: :destroy
   # The `role` column is an enum that can only take on the values `:user` and `:admin`.
   enum role: [:user, :recruiter, :admin]
   # The `set_default_role` method is called automatically by the `after_initialize` callback

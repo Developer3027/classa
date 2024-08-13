@@ -1,0 +1,249 @@
+<%= form_with(model: inquiry, class: "contents") do |form| %>
+  <% if inquiry.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(inquiry.errors.count, "error") %> prohibited this inquiry from being saved:</h2>
+      <ul>
+        <% inquiry.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <!--Personal block-->
+  <div class="border border-zinc-800 dark:border-zinc-600 rounded p-2 mb-2">
+    <span class="block m-2 text-sm font-semibold text-gray-900 dark:text-white">Personal Info</span>
+    <hr/>
+    <div class="my-5">
+      <h6 class="block m-2 text-sm font-medium text-gray-900 dark:text-white">First Name</h6>
+      <span class="block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full bg-orange-100"><%= current_user.first_name %></span>
+    </div>
+    <div class="my-5">
+      <div class="flex justify-start items-center">
+        <%= form.label :middle_name, "Middle Name", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      </div>
+      <%= form.text_field :middle_name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <h6 class="block m-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</h6>
+      <span class="block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full bg-orange-100"><%= current_user.last_name %></span>
+    </div>
+    <div class="my-5">
+      <h6 class="block m-2 text-sm font-medium text-gray-900 dark:text-white">Email</h6>
+      <span class="block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full bg-orange-100"><%= current_user.email %></span>
+    </div>
+    <div class="my-5">
+      <h6 class="block m-2 text-sm font-medium text-gray-900 dark:text-white">Phone</h6>
+      <span class="block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full bg-orange-100"><%= current_user.phone %></span>
+    </div>
+    <div class="my-5">
+      <h6 class="block m-2 text-sm font-medium text-gray-900 dark:text-white">Date of Birth</h6>
+      <span class="block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full bg-orange-100"><%= current_user.dob %></span>
+    </div>
+  </div>
+  <!--Location block-->
+  <div class="border border-zinc-800 dark:border-zinc-600 rounded p-2 mb-2">
+    <span class="block m-2 text-sm font-semibold text-gray-900 dark:text-white">Home Base</span>
+    <hr/>
+    <div class="my-5">
+      <div class="flex justify-start items-center">
+        <%= form.label :current_address, "Address", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :current_address, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <div class="flex justify-start items-center">
+        <%= form.label :current_address_2, "Address 2nd line exp: Apt 2256", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      </div>
+      <%= form.text_field :current_address_2, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <div class="flex justify-start items-center">
+        <%= form.label :current_city, "City", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :current_city, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <div class="flex justify-start items-center">
+        <%= form.label :current_state, "State", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :current_state, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <div class="flex justify-start items-center">
+        <%= form.label :current_zip, "Zip", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :current_zip, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <div class="flex justify-start items-center">
+        <%= form.label :current_country, "Country", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :current_country, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+  </div>
+  <!--Military block-->
+  <div class="border border-zinc-800 dark:border-zinc-600 rounded p-2 mb-2">
+    <span class="block m-2 text-sm font-semibold text-gray-900 dark:text-white">Mililtary Service</span>
+    <hr/>
+    <div class="my-5">
+      <div class="flex justify-start items-center">
+        <%= form.label :veteran, "Veteran", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :veteran, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <div class="flex justify-start items-center">
+        <%= form.label :military_branch, "Branch Served", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :military_branch, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+  </div>
+  <!--Career block-->
+  <div class="border border-zinc-800 dark:border-zinc-600 rounded p-2 mb-2">
+    <span class="block m-2 text-sm font-semibold text-gray-900 dark:text-white">Career Status</span>
+    <hr/>
+    <div class="my-5">
+      <!--Company, Lease, Owner-->
+      <div class="flex justify-start items-center">
+        <%= form.label :career_status, "Driving Career", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :career_status, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <!---->
+      <div class="flex justify-start items-center">
+        <%= form.label :solo_team, "Team or Solo Driver", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :solo_team, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <!---->
+      <div class="flex justify-start items-center">
+        <%= form.label :interest_team, "Interested in Team Driving?", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :interest_team, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <!---->
+      <div class="flex justify-start items-center">
+        <%= form.label :common_freight, "Common Freight Hauled", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :common_freight, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <!---->
+      <div class="flex justify-start items-center">
+        <%= form.label :prefered_freight, "Prefered Freight", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      </div>
+      <%= form.text_field :prefered_freight, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+  </div>
+  <!--License block-->
+  <div class="border border-zinc-800 dark:border-zinc-600 rounded p-2 mb-2">
+    <span class="block m-2 text-sm font-semibold text-gray-900 dark:text-white">License Info</span>
+    <hr/>
+    <div class="my-5">
+      <!--Class A, etc-->
+      <div class="flex justify-start items-center">
+        <%= form.label :lic_type, "License Class", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :lic_type, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <!--Years driving-->
+      <div class="flex justify-start items-center">
+        <%= form.label :cdl_experience, "Driving Experience", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :cdl_experience, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <!--hazmat, tanker, etc-->
+      <div class="flex justify-start items-center">
+        <%= form.label :endorsements, "License Endorsements", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :endorsements, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <!--Number of violations pat 3 years-->
+      <div class="flex justify-start items-center">
+        <%= form.label :moving_violations, "Number of Moving Violations in past 3 years", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :moving_violations, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <!--Explain moving violations-->
+      <div class="flex justify-start items-center">
+        <%= form.label :mv_info, "Please explain any Moving Violations", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_area :mv_info, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <!--Number of preventable accidents past 3 years-->
+      <div class="flex justify-start items-center">
+        <%= form.label :preventable_accidents, "Number of Preventable Accidents in past 3 years", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :preventable_accidents, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <!--Explain PA-->
+      <div class="flex justify-start items-center">
+        <%= form.label :pa_info, "Please explain any Preventable Accidents", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_area :pa_info, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+  </div>
+  <!--wraping up block-->
+  <div class="border border-zinc-800 dark:border-zinc-600 rounded p-2 mb-2">
+    <span class="block m-2 text-sm font-semibold text-gray-900 dark:text-white">Finishing Up</span>
+    <hr/>
+    <div class="my-5">
+      <!---->
+      <div class="flex justify-start items-center">
+        <%= form.label :contact_time, "Best time of day to contact you.", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :contact_time, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <!---->
+      <div class="flex justify-start items-center">
+        <%= form.label :contact_method, "Best way to contact you.", class: "block m-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :contact_method, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+    <div class="my-5">
+      <!---->
+      <div class="flex justify-start items-center">
+        <p class="block m-2 text-sm font-medium text-gray-900 dark:text-white">
+          <small class="text-sm">
+            You give permission to contact you via the prefered method and agree to the Terms of Service and Privacy Policy.
+          </small>
+        </p>
+        <em class="font-bold text-lg text-red-400">*</em>
+      </div>
+      <%= form.text_field :pp_tos, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+  </div>
+  <div class="inline">
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>
